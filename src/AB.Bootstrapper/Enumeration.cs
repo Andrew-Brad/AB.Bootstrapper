@@ -91,7 +91,7 @@ namespace AB.Bootstrapper
 
         public static T FromDisplayName<T>(string displayName) where T : Enumeration, new()
         {
-            var matchingItem = parse<T, string>(displayName, "display name", item => item.DisplayName == displayName);
+            var matchingItem = parse<T, string>(displayName, "display name", item => item.DisplayName.ToUpper() == displayName.ToUpper());
             return matchingItem;
         }
 

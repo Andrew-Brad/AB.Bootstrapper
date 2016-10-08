@@ -18,5 +18,12 @@ namespace AB.Bootstrapper
             East = 3,
             West = 4
         }
+
+        public enum LeftRight
+        {
+            Unspecified = 0,
+            Left = 1,
+            Right = 2
+        }
     }
 }
