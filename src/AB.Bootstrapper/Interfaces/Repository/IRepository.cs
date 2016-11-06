@@ -4,7 +4,7 @@ namespace AB.Bootstrapper.Interfaces.Repository
 {
     /// <summary>
     /// Common interface for all of my repository implementations.  This design works generally well for me.  I don't like DB specific
-    /// exceptions leaking up to my calling code, so my repo's are transient in lifetime, and have state which is managed by the repo itself to
+    /// exceptions leaking up to my calling code, so my repo's tend to be transient in lifetime, and have state which is managed by the repo itself to
     /// indicate status.
     /// *** All inherited repositories should adhere to CRUD naming conventions.  This is the most logical, and often specific 
     /// database implementations should have class names following the template [Database][Domain]Repository.
