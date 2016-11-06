@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AB.Bootstrapper", "src\AB.Bootstrapper\AB.Bootstrapper.xproj", "{0E349D42-E7F5-4158-A0DE-8F3721D0BFE8}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AB.Bootstrapper.MongoDb", "src\AB.Bootstrapper.MongoDb\AB.Bootstrapper.MongoDb.xproj", "{54A1F7EE-606E-4ADE-A18E-D9241DAC41F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +24,16 @@ Global
 		{0E349D42-E7F5-4158-A0DE-8F3721D0BFE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E349D42-E7F5-4158-A0DE-8F3721D0BFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E349D42-E7F5-4158-A0DE-8F3721D0BFE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54A1F7EE-606E-4ADE-A18E-D9241DAC41F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54A1F7EE-606E-4ADE-A18E-D9241DAC41F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54A1F7EE-606E-4ADE-A18E-D9241DAC41F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54A1F7EE-606E-4ADE-A18E-D9241DAC41F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0E349D42-E7F5-4158-A0DE-8F3721D0BFE8} = {CCC0726A-72BF-4209-907F-1E26DCA00113}
+		{54A1F7EE-606E-4ADE-A18E-D9241DAC41F5} = {CCC0726A-72BF-4209-907F-1E26DCA00113}
 	EndGlobalSection
 EndGlobal
