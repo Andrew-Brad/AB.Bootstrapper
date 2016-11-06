@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AB.Bootstrapper.MongoDb
 {
-    public class MongoRepository<T>// : ICrudRepository<T,Guid>
+    public class MongoRepository<T> : ICrudRepository<T,Guid>
     {
         /// <summary>
         /// From the docs:

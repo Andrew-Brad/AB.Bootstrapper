@@ -11,8 +11,9 @@ namespace AB.Bootstrapper.Interfaces.Repository
     public interface ICrudRepository<T,TId>
     {
         Task<T> FindById(TId id);
-        Task<IEnumerable<T>> FindAll();
-        uint GetCount();
+        Task<IEnumerable<T>> ReadAll();
+        Task<ulong> GetCount();
         Task<bool> DeleteById(TId id);
+        Task<bool> DeleteAll();
     }
 }
