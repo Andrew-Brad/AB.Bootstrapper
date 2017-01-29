@@ -16,6 +16,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AB.Bootstrapper.MongoDb", "
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AB.Bootstrapper.Postgres", "src\AB.Bootstrapper.Postgres\AB.Bootstrapper.Postgres.xproj", "{0F847E71-2C93-455B-B7BD-45E183072A32}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AB.Bootstrapper.Arango", "src\AB.Bootstrapper.Arango\AB.Bootstrapper.Arango.xproj", "{497BB091-550A-43ED-988C-FA03EB78F900}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{0F847E71-2C93-455B-B7BD-45E183072A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F847E71-2C93-455B-B7BD-45E183072A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F847E71-2C93-455B-B7BD-45E183072A32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{497BB091-550A-43ED-988C-FA03EB78F900}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{497BB091-550A-43ED-988C-FA03EB78F900}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{497BB091-550A-43ED-988C-FA03EB78F900}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{497BB091-550A-43ED-988C-FA03EB78F900}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,5 +48,6 @@ Global
 		{0E349D42-E7F5-4158-A0DE-8F3721D0BFE8} = {CCC0726A-72BF-4209-907F-1E26DCA00113}
 		{54A1F7EE-606E-4ADE-A18E-D9241DAC41F5} = {CCC0726A-72BF-4209-907F-1E26DCA00113}
 		{0F847E71-2C93-455B-B7BD-45E183072A32} = {CCC0726A-72BF-4209-907F-1E26DCA00113}
+		{497BB091-550A-43ED-988C-FA03EB78F900} = {CCC0726A-72BF-4209-907F-1E26DCA00113}
 	EndGlobalSection
 EndGlobal
