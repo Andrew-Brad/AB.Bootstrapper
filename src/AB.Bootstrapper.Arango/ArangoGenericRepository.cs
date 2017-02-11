@@ -38,7 +38,7 @@ namespace AB.Bootstrapper.Arango
             using (ArangoDatabase db = new ArangoDatabase(_settings))
             {
                 IDocumentIdentifierResult removedResults = await db.Collection<T>().RemoveByIdAsync(id);
-                _logger.LogDebug("{repository} ran DeleteById and returned {removedResults}", this, removedResults);
+                _logger.LogDebug("{repository} ran {function} and returned {removedResults}", this, nameof(DeleteById),removedResults);
                 return true;
             }
         }
@@ -48,7 +48,7 @@ namespace AB.Bootstrapper.Arango
             using (ArangoDatabase db = new ArangoDatabase(_settings))
             {
                 var obj = await db.DocumentAsync<T>(id);
-                _logger.LogDebug("{repository} ran FindById and returned {obj}", this, obj);
+                _logger.LogDebug("{repository} ran {function} and returned {obj}", this, nameof(FindById),obj);
                 return obj;
             }
         }
@@ -58,7 +58,7 @@ namespace AB.Bootstrapper.Arango
             using (ArangoDatabase db = new ArangoDatabase(_settings))
             {
                 long? count = db.Query<T>().Statistics.Count;
-                _logger.LogDebug("{repository} ran FindById and returned {count}", this, count);
+                _logger.LogDebug("{repository} ran {} and returned {count}", this, nameof(GetCount),count);
                 if (count.HasValue) return (ulong)count.Value;
                 else return 0;
             }
