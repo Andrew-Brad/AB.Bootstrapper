@@ -16,9 +16,9 @@ namespace AB.Bootstrapper.Arango
         //Arango Domain class mappings: http://stackoverflow.com/questions/38844008/design-entities-with-union-architecture-concepts
         public ArangoGenericSingletonRepository(DatabaseSharedSetting settings,ILogger<ArangoGenericSingletonRepository<T>> logger = null)
         {
-            if (logger != null) _logger = logger;
+            _logger = logger;
             //if (string.IsNullOrEmpty(databaseName)) databaseName = typeof(T).Name;
-            _logger.LogDebug("{repository} successfully instantiated using {settings}.  Pointing Arango Repo to {url}",this,settings,settings.Url);
+            _logger?.LogDebug("{repository} successfully instantiated using {settings}.  Pointing Arango Repo to {url}",this,settings,settings.Url);
         }
 
         public async Task<bool> DeleteAll()
@@ -28,7 +28,7 @@ namespace AB.Bootstrapper.Arango
                 //this was grabbed from the docs and is not using the clean truncate way to do it, but I can't find truncate in the c# driver
                 //remove products transactionally and return removed results
                 IAqlModifiable<T> removedResults = db.Query<T>().Remove();
-                _logger.LogDebug("{repository} ran DeleteAll and returned {removedResults}",this,removedResults);
+                _logger?.LogDebug("{repository} ran DeleteAll and returned {removedResults}",this,removedResults);
                 return true;
             }
         }
@@ -38,7 +38,7 @@ namespace AB.Bootstrapper.Arango
             using (ArangoDatabase db = new ArangoDatabase(_settings))
             {
                 IDocumentIdentifierResult removedResults = await db.Collection<T>().RemoveByIdAsync(id);
-                _logger.LogDebug("{repository} ran {function} and returned {removedResults}", this, nameof(DeleteById),removedResults);
+                _logger?.LogDebug("{repository} ran {function} and returned {removedResults}", this, nameof(DeleteById),removedResults);
                 return true;
             }
         }
@@ -48,7 +48,7 @@ namespace AB.Bootstrapper.Arango
             using (ArangoDatabase db = new ArangoDatabase(_settings))
             {
                 var obj = await db.DocumentAsync<T>(id);
-                _logger.LogDebug("{repository} ran {function} and returned {obj}", this, nameof(FindById),obj);
+                _logger?.LogDebug("{repository} ran {function} and returned {obj}", this, nameof(FindById),obj);
                 return obj;
             }
         }
@@ -58,7 +58,7 @@ namespace AB.Bootstrapper.Arango
             using (ArangoDatabase db = new ArangoDatabase(_settings))
             {
                 long? count = db.Query<T>().Statistics.Count;
-                _logger.LogDebug("{repository} ran {} and returned {count}", this, nameof(GetCount),count);
+                _logger?.LogDebug("{repository} ran {} and returned {count}", this, nameof(GetCount),count);
                 if (count.HasValue) return (ulong)count.Value;
                 else return 0;
             }
@@ -69,7 +69,7 @@ namespace AB.Bootstrapper.Arango
             using (ArangoDatabase db = new ArangoDatabase(_settings))
             {
                 var all = await db.All<T>().ToListAsync();
-                _logger.LogDebug("{repository} ran ReadAll and returned {all}", this, all);
+                _logger?.LogDebug("{repository} ran ReadAll and returned {all}", this, all);
                 return all;
             }
         }
