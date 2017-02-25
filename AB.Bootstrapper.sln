@@ -1,22 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26206.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CCC0726A-72BF-4209-907F-1E26DCA00113}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F23EA063-8CF4-4A1B-8AF1-4A75AC23F7EA}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AB.Bootstrapper", "src\AB.Bootstrapper\AB.Bootstrapper.xproj", "{0E349D42-E7F5-4158-A0DE-8F3721D0BFE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AB.Bootstrapper", "src\AB.Bootstrapper\AB.Bootstrapper.csproj", "{0E349D42-E7F5-4158-A0DE-8F3721D0BFE8}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AB.Bootstrapper.MongoDb", "src\AB.Bootstrapper.MongoDb\AB.Bootstrapper.MongoDb.xproj", "{54A1F7EE-606E-4ADE-A18E-D9241DAC41F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AB.Bootstrapper.MongoDb", "src\AB.Bootstrapper.MongoDb\AB.Bootstrapper.MongoDb.csproj", "{54A1F7EE-606E-4ADE-A18E-D9241DAC41F5}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AB.Bootstrapper.Postgres", "src\AB.Bootstrapper.Postgres\AB.Bootstrapper.Postgres.xproj", "{0F847E71-2C93-455B-B7BD-45E183072A32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AB.Bootstrapper.Postgres", "src\AB.Bootstrapper.Postgres\AB.Bootstrapper.Postgres.csproj", "{0F847E71-2C93-455B-B7BD-45E183072A32}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AB.Bootstrapper.Arango", "src\AB.Bootstrapper.Arango\AB.Bootstrapper.Arango.xproj", "{497BB091-550A-43ED-988C-FA03EB78F900}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AB.Bootstrapper.Arango", "src\AB.Bootstrapper.Arango\AB.Bootstrapper.Arango.csproj", "{497BB091-550A-43ED-988C-FA03EB78F900}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
