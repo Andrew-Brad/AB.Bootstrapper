@@ -17,6 +17,7 @@ namespace AB.Bootstrapper.Arango
         public ArangoGenericSingletonRepository(DatabaseSharedSetting settings,ILogger<ArangoGenericSingletonRepository<T>> logger = null)
         {
             _logger = logger;
+            _settings = settings;
             //if (string.IsNullOrEmpty(databaseName)) databaseName = typeof(T).Name;
             _logger?.LogDebug("{repository} successfully instantiated using {settings}.  Pointing Arango Repo to {url}",this,settings,settings.Url);
         }
